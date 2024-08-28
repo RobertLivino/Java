@@ -93,6 +93,5 @@ public class Ponto {
     
     public void print(){
         System.out.println(cordX + " , " + cordY);
-        
     }
 }
