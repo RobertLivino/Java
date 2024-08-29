@@ -17,11 +17,21 @@ public class Cartesiano {
 //        Ponto p;
 //        Ponto p1 = new Ponto(10, 20);
 //        System.out.println("p1: " + p1);
-        Circulo cl = new Circulo(10, 20, 7);
-        cl.isValid();
-        cl.perimeter();
-        cl.area();
-        System.out.println("cl: " + cl);
+        
+        Circulo cl1 = new Circulo();
+        Circulo cl2 = new Circulo(10, 20, 7);
+        Circulo cl3 = new Circulo(cl2);
+        
+        System.out.println("cl: " + cl1);
+        System.out.println("cl: " + cl2);
+        System.out.println("cl: " + cl3);
+        
+//        Circulo cl1 = new Circulo();
+//        cl.isValid();
+//        cl.perimeter();
+//        cl.area();
+//        System.out.println("cl: " + cl);
+//        System.out.println("cl: " + cl1);
         
 //        p.setXY(2, 9);
 //        p.distance(3, 7);

@@ -21,8 +21,8 @@ public class Circulo extends Ponto {
         this.raio = raio;
     }
     
-    public Circulo(Ponto pt, Circulo cl){
-        super(pt);
+    public Circulo(Circulo cl){
+        super.assign(cl);
         this.raio = cl.raio;
     }
     
