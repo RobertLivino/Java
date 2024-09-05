@@ -18,9 +18,20 @@ public class Cartesiano {
 //        Ponto p1 = new Ponto(10, 20);
 //        System.out.println("p1: " + p1);
         
+//        Segmento sg1 = new Segmento();
+//        Segmento sg2 = new Segmento(1, 3, 4, 6);
+//        Segmento sg3 = new Segmento(sg2);
+//        
+//        System.out.println("sgl: " + sg1);
+//        System.out.println("sg2: " + sg2);
+//        System.out.println("sg3: " + sg3);
+
         Circulo cl1 = new Circulo();
         Circulo cl2 = new Circulo(10, 20, 7);
         Circulo cl3 = new Circulo(cl2);
+        
+        System.out.println("c1 == c2 " + cl1.equals(cl2));
+        System.out.println("c2 == c3 " + cl2.equals(cl3));
         
         System.out.println("cl: " + cl1);
         System.out.println("cl: " + cl2);

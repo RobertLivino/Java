@@ -1,5 +1,5 @@
 /*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+* Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package cartesiano;
@@ -37,25 +37,26 @@ public class Circulo extends Ponto {
     
     @Override
     public String toString ( ){
-        return "("  + super.getCordX() + ", " + super.getCordY() + "):" + raio;
+        return "("  + super.getX() + ", " + super.getY() + "):" + raio;
     }
     
     public boolean isValid(){
-        boolean isValid = raio > 0;
-        System.out.println(isValid);
         return raio > 0;
     }
     
     public double perimeter(){
-        double perimeter = 2*Math.PI*raio;
-        System.out.println(perimeter);
-        return perimeter;
+        return 2*Math.PI*raio;
     }
     
     public double area(){
-        double area = Math.PI*Math.pow(raio, 2);
-        System.out.println(area);
-        return area;
+        return Math.PI*Math.pow(raio, 2);
     }
         
+    @Override
+    public boolean equals(Object obj){
+        if(obj == null) return false;
+        if(!(obj instanceof Circulo)) return false;
+        Circulo cl = (Circulo)obj;
+        return (raio ==cl.raio) && super.equals(cl);
+    }    
 }

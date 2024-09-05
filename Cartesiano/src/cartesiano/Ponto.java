@@ -9,55 +9,55 @@ package cartesiano;
  * @author 0040962123029
  */
 public class Ponto {
-    private double cordX, cordY;
+    private double x, y;
 
     public Ponto() {
-        this.cordX = 0;
-        this.cordY = 0;
+        this.x = 0;
+        this.y = 0;
     }
     
-    public Ponto(double cordX, double cordY) {
-        this.cordX = cordX;
-        this.cordY = cordY;
+    public Ponto(double x, double y) {
+        this.x = x;
+        this.y = y;
     }
     
     public Ponto(Ponto pt) {
-        this.cordX = pt.cordX;
-        this.cordY = pt.cordY;
+        this.x = pt.x;
+        this.y = pt.y;
     }
 
-    public void setCordX(double cordX) {
-        this.cordX = cordX;
+    public void setX(double x) {
+        this.x = x;
     }
 
-    public double getCordX() {
-        return cordX;
+    public double getX() {
+        return x;
     }
 
-    public double getCordY() {
-        return cordY;
+    public double getY() {
+        return y;
     }
     
-    public void setCordY(float cordY) {
-        this.cordY = cordY;
+    public void setY(float y) {
+        this.y = y;
     }
     
     public void setXY(double newX, double newY){
-        this.cordX = newX;
-        this.cordY = newY;
+        this.x = newX;
+        this.x = newY;
     }
     
     public void assign(Ponto pt){
-        this.cordX = pt.cordX;
-        this.cordY = pt.cordY;
+        this.x = pt.x;
+        this.y = pt.y;
     }
     
     public double deltaX(double vX){
-        return vX-cordX;
+        return vX-x;
     }
     
     public double deltaY(double vY){
-        return vY-cordY;
+        return vY-y;
     }
     
     public double distance(double posX, double posY){
@@ -68,30 +68,43 @@ public class Ponto {
         return dist;
     }
     public double distance(Ponto pt){
-        return distance(pt.cordX, pt.cordY);
+        return distance(pt.x, pt.y);
     }
     
     public double distance(){
-        double dist = Math.sqrt(Math.pow(cordX, 2) + Math.pow(cordY, 2));
+        double dist = Math.sqrt(Math.pow(x, 2) + Math.pow(y, 2));
         System.out.println(dist);
         return dist;
     }
     public void desloc(double dX, double dY){
-        this.cordX = this.cordX + dX;
-        this.cordY = this.cordY + dY;
+        this.x = this.x + dX;
+        this.y = this.y + dY;
     }
     
     public void escale(double factor){
-        this.cordX = this.cordX * factor;
-        this.cordY = this.cordY * factor;
+        this.x = this.x * factor;
+        this.y = this.y * factor;
     }
     
+    @Override
     public String toString (){
-        return "("  + cordX + ", " + cordY + ")";
+        return "("  + x + ", " + y + ")";
     }
             
     
     public void print(){
-        System.out.println(cordX + " , " + cordY);
+        System.out.println(x + " , " + y);
+    }
+    
+    @Override
+    public boolean equals(Object obj){
+        if(obj == null){ 
+            return false;
+        }
+        if(!(obj instanceof Ponto)){ 
+            return false;
+        }
+        Ponto pt = (Ponto)obj;
+        return (x == pt.x) && (y == pt.y);
     }
 }
