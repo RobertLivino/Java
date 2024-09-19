@@ -17,12 +17,16 @@ public class Administracao extends Funcionario {
     }
     
     public void registrarFalta(){
-        faltas += 1;
+        faltas ++;
+    }
+    
+    private double desconto(){
+        return (salarioBase/30) * faltas;
     }
     
     @Override
     public double salarioLiquido(){
-        return salarioBase - ((super.salarioBase/30) * faltas);
+        return salarioBase - desconto();
     }
     
     @Override
@@ -34,6 +38,7 @@ public class Administracao extends Funcionario {
     public void holerrith(){
         super.holerrith();
         System.out.println("Faltas: " + faltas + "\n" +
+                           "Disconto por faltas: " + desconto() + "\n" +
                            "Salario Liquido: " + salarioLiquido() + "\n");
     }
 }
