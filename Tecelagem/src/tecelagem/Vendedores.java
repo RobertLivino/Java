@@ -11,12 +11,12 @@ package tecelagem;
 public class Vendedores extends Funcionario{
     protected double vendas;
 
-    public Vendedores(String nome, String rg, double salarioBase) {
-        super(nome, rg, salarioBase);
+    public Vendedores(String nome, String rg, double salarioBase, int cod) {
+        super(nome, rg, salarioBase, cod);
         this.vendas = 0; 
     }
     
-    public void registrarVenda (int valor){
+    public void registrarVenda (double valor){
         vendas += valor;
     }
     

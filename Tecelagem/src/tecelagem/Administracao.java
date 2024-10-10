@@ -11,8 +11,8 @@ package tecelagem;
 public class Administracao extends Funcionario {
     
     public int faltas;
-    public Administracao(String nome, String rg, double salarioBase) {
-        super(nome, rg, salarioBase);
+    public Administracao(String nome, String rg, double salarioBase, int cod) {
+        super(nome, rg, salarioBase, cod);
         this.faltas = 0;
     }
     

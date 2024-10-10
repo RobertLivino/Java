@@ -11,8 +11,8 @@ package tecelagem;
 public class Producao extends Funcionario{
     protected double horasDiurnas, horasNoturnas;
 
-    public Producao(String nome, String rg, double salarioBase) {
-        super(nome, rg, salarioBase);
+    public Producao(String nome, String rg, double salarioBase, int cod) {
+        super(nome, rg, salarioBase, cod);
         this.horasDiurnas = 0;
         this.horasNoturnas = 0;
     }

@@ -14,11 +14,23 @@ public class Tecelagem {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Administracao adm = new Administracao("Carlos", "55560698009", 1314);
-        adm.registrarFalta();
-        adm.holerrith();
-        adm.novoMes();
-        adm.holerrith();
+        
+        ListaFunc lf = new ListaFunc(5);
+        lf.addFunc(new Vendedores("carlos", "123-235", 1233, 1));
+        lf.addFunc(new Producao("carlos", "123-235", 123, 2));
+        lf.addFunc(new Administracao("carlos", "123-235", 1233, 3));
+        
+        lf.registrarVenda(1, 20000);
+        lf.registrarFalta(3);
+        lf.horasDiurnas(2, 30);
+        
+        lf.printAll();
+//        lf.listagemVendedores();
+//        Administracao adm = new Administracao("Carlos", "55560698009", 1314, 1);
+//        adm.registrarFalta();
+//        adm.holerrith();
+//        adm.novoMes();
+//        adm.holerrith();
         
 //        Producao prd = new Producao("Carlos", "55560698009", 13);
 //        prd.horasDiurnas(230);
