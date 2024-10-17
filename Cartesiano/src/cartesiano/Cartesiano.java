@@ -26,16 +26,28 @@ public class Cartesiano {
 //        System.out.println("sg2: " + sg2);
 //        System.out.println("sg3: " + sg3);
 
-        Circulo cl1 = new Circulo();
-        Circulo cl2 = new Circulo(10, 20, 7);
-        Circulo cl3 = new Circulo(cl2);
+//        Circulo cl1 = new Circulo();
+//        Circulo cl2 = new Circulo(10, 20, 7);
+//        Circulo cl3 = new Circulo(cl2);
+//        
+//        System.out.println("c1 == c2 " + cl1.equals(cl2));
+//        System.out.println("c2 == c3 " + cl2.equals(cl3));
+//        
+//        System.out.println("cl: " + cl1);
+//        System.out.println("cl: " + cl2);
+//        System.out.println("cl: " + cl3);
+
+        Poligono pl = new Poligono();
+        pl.addVertex(new Ponto());
+        pl.addVertex(new Ponto(10,10));
+        pl.addVertex(new Ponto(20,20));
         
-        System.out.println("c1 == c2 " + cl1.equals(cl2));
-        System.out.println("c2 == c3 " + cl2.equals(cl3));
+        Poligono pl2 = new Poligono();
+        pl2.addVertex(new Ponto());
+        pl2.addVertex(new Ponto(15,15));
+        pl2.addVertex(new Ponto(25,25));
         
-        System.out.println("cl: " + cl1);
-        System.out.println("cl: " + cl2);
-        System.out.println("cl: " + cl3);
+        System.out.println(pl.distance(pl2));
         
 //        Circulo cl1 = new Circulo();
 //        cl.isValid();

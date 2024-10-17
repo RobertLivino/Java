@@ -64,7 +64,6 @@ public class Ponto {
         double dX = deltaX(posX);
         double dY = deltaY(posY);
         double dist = Math.sqrt(Math.pow(dX, 2) + Math.pow(dY, 2));
-        System.out.println(dist);
         return dist;
     }
     public double distance(Ponto pt){
