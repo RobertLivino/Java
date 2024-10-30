@@ -27,7 +27,7 @@ public class ListaFunc {
     }
     
     public boolean addFunc(Funcionario f) {
-        if(count >= lista.length) return false;
+//        if(count >= lista.length) return false;
         if(buscaCod(f.cod) >=0 ) return false;
         
         lista[count] = f;

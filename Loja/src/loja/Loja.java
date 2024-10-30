@@ -14,6 +14,10 @@ public class Loja {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        Lista l = new Lista(10);
+        l.add(new Roupa("Shorts", 34, 80));
+        
+        l.listAll();
     }
     
 }

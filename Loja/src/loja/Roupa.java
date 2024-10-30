@@ -56,10 +56,24 @@ public class Roupa implements ItemEstoqueInt{
     public void incUnits(int qtd){
         this.qtd += qtd;
     }
-//    void decUnits(int qtd) {
-//        
-//    }
-//    int getUnits();
-//    float getPrice();
-//    void print();
+    @Override
+    public void decUnits(int qtd) {
+        if (this.qtd - qtd <= 0) return;
+        this.qtd -= qtd;
+    }
+    @Override
+    public int getUnits() { 
+        return qtd;
+    }
+    @Override
+    public float getPrice() {
+        return (float) preco;
+    }
+    @Override
+    public void print() {
+        System.out.println("Descrição: " + descricao + ",\n" +
+                           "Tamanho: " + tamanho + ",\n" + 
+                           "Preço: " + preco + ",\n" + 
+                           "Quantidade em estoque: " + qtd + "\n");
+    }
 }
