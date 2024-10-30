@@ -27,8 +27,9 @@ public class Tecelagem {
         }
         catch (Exception exc) {
             System.out.println(exc.getMessage() + "\n");
-            lf.printAll();
+//            lf.printAll();
         }
+        lf.printAll();
 //        lf.registrarVenda(1, 20000);
 //        lf.registrarFalta(3);
 //        lf.horasDiurnas(2, 30);
