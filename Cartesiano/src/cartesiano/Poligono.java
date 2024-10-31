@@ -13,7 +13,7 @@ public class Poligono {
     private int count;
     
     public Poligono(){
-        this.vertices = new Ponto[50];
+        this.vertices = new Ponto[5];
         this.count = 0;
     }
     public Poligono(Poligono p){
@@ -35,11 +35,15 @@ public class Poligono {
         return buscaPonto(pt) > 0;
     }
     public boolean addVertex(Ponto pt) {
-        if (count >= 50) return false;
+//        if (count >= vertices.length) return false;
         if (buscaPonto(pt) > 0) return false;
-        
-        vertices[count] = pt;
-        count++;
+        try{
+            vertices[count] = pt;
+            count++;
+        }
+        catch(Exception exc){
+            System.out.println(exc.getMessage() + "\n");
+        }
         return true;
     } 
     public boolean isValid() {

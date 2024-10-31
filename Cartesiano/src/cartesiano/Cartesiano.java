@@ -41,13 +41,17 @@ public class Cartesiano {
         pl.addVertex(new Ponto());
         pl.addVertex(new Ponto(10,10));
         pl.addVertex(new Ponto(20,20));
+        pl.addVertex(new Ponto(30,20));
+        pl.addVertex(new Ponto(40,20));
+        pl.addVertex(new Ponto(50,20));
+        pl.print("");
         
-        Poligono pl2 = new Poligono();
-        pl2.addVertex(new Ponto());
-        pl2.addVertex(new Ponto(15,15));
-        pl2.addVertex(new Ponto(25,25));
+//        Poligono pl2 = new Poligono();
+//        pl2.addVertex(new Ponto());
+//        pl2.addVertex(new Ponto(15,15));
+//        pl2.addVertex(new Ponto(25,25));
         
-        System.out.println(pl.distance(pl2));
+//        System.out.println(pl.distance(pl2));
         
 //        Circulo cl1 = new Circulo();
 //        cl.isValid();

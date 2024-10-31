@@ -16,19 +16,19 @@ public class Tecelagem {
     public static void main(String[] args) {
         
         ListaFunc lf = new ListaFunc(2);
-//        lf.addFunc(new Vendedores("carlos", "123-235", 1233, 1));
-//        lf.addFunc(new Producao("carlos", "123-235", 123, 2));
-//        lf.addFunc(new Administracao("carlos", "123-235", 1233, 3));
+        lf.addFunc(new Vendedores("carlos", "123-235", 1233, 1));
+        lf.addFunc(new Producao("carlos", "123-235", 123, 2));
+        lf.addFunc(new Administracao("carlos", "123-235", 1233, 3));
         
-        try {
-            lf.addFunc(new Vendedores("carlos", "123-235", 1233, 1));
-            lf.addFunc(new Producao("carlos", "123-235", 123, 2));
-            lf.addFunc(new Administracao("carlos", "123-235", 1233, 3));  
-        }
-        catch (Exception exc) {
-            System.out.println(exc.getMessage() + "\n");
-//            lf.printAll();
-        }
+//        try {
+//            lf.addFunc(new Vendedores("carlos", "123-235", 1233, 1));
+//            lf.addFunc(new Producao("carlos", "123-235", 123, 2));
+//            lf.addFunc(new Administracao("carlos", "123-235", 1233, 3));  
+//        }
+//        catch (Exception exc) {
+//            System.out.println(exc.getMessage() + "\n");
+////            lf.printAll();
+//        }
         lf.printAll();
 //        lf.registrarVenda(1, 20000);
 //        lf.registrarFalta(3);
