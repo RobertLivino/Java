@@ -34,16 +34,12 @@ public class Poligono {
     public boolean ptExist(Ponto pt) {
         return buscaPonto(pt) > 0;
     }
-    public boolean addVertex(Ponto pt) {
-//        if (count >= vertices.length) return false;
-        if (buscaPonto(pt) > 0) return false;
-        try{
-            vertices[count] = pt;
-            count++;
-        }
-        catch(Exception exc){
-            System.out.println(exc.getMessage() + "\n");
-        }
+    public boolean addVertex(Ponto pt) throws Exception {
+        if (count >= vertices.length) throw new ListaCheia();
+        if (buscaPonto(pt) > 0) throw new PontoJaExiste();
+        
+        vertices[count] = pt;
+        count++;
         return true;
     } 
     public boolean isValid() {

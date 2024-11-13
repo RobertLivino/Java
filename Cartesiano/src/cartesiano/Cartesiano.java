@@ -4,6 +4,9 @@
  */
 package cartesiano;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  *
  * @author 0040962123029
@@ -14,7 +17,20 @@ public class Cartesiano {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-//        Ponto p;
+        try {
+            
+            Poligono pl = new Poligono();
+            pl.addVertex(new Ponto());
+            pl.addVertex(new Ponto(10,10));
+            pl.addVertex(new Ponto(20,20));
+            pl.addVertex(new Ponto(30,20));
+            pl.addVertex(new Ponto(40,20));
+            pl.addVertex(new Ponto(50,20));
+            pl.print("");
+        } catch (Exception ex) {
+            Logger.getLogger(Cartesiano.class.getName()).log(Level.SEVERE, null, ex);
+        }
+            //        Ponto p;
 //        Ponto p1 = new Ponto(10, 20);
 //        System.out.println("p1: " + p1);
         
@@ -37,15 +53,6 @@ public class Cartesiano {
 //        System.out.println("cl: " + cl2);
 //        System.out.println("cl: " + cl3);
 
-        Poligono pl = new Poligono();
-        pl.addVertex(new Ponto());
-        pl.addVertex(new Ponto(10,10));
-        pl.addVertex(new Ponto(20,20));
-        pl.addVertex(new Ponto(30,20));
-        pl.addVertex(new Ponto(40,20));
-        pl.addVertex(new Ponto(50,20));
-        pl.print("");
-        
 //        Poligono pl2 = new Poligono();
 //        pl2.addVertex(new Ponto());
 //        pl2.addVertex(new Ponto(15,15));
@@ -70,6 +77,7 @@ public class Cartesiano {
 //        p.setXY(2, 9);
 //        p.escale(2.3);
 //        p.print();
+        
     }
     
 }

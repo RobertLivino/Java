@@ -8,13 +8,12 @@ package cartesiano;
  *
  * @author 0040962123029
  */
-public class ListaCheia extends Exception{
+public class PontoJaExiste extends Exception {
     private String msg;
-    public ListaCheia() {
-        this.msg = "A lista esta cheia";
+    public PontoJaExiste() {
+        this.msg = "O ponto informado ja existe";
     }
-
-    public ListaCheia(String msg) {
+    public PontoJaExiste(String msg) {
         super(msg);
     }
     @Override
